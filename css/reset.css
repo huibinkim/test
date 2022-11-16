@@ -1,0 +1,37 @@
+*{ margin:0; padding:0; }
+a{ text-decoration: none; color:#333333; }
+li{ list-style: none; }
+img{ border:none; vertical-align: middle; }
+
+/* 공통 */
+@import url(components.css);
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(font/NotoSansKR-Regular.woff2) format('woff2'),url(font/NotoSansKR-Regular.woff) format('woff'),url(font/NotoSansKR-Regular.otf) format('opentype');}
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(font/NotoSansKR-Medium.woff2) format('woff2'),url(font/NotoSansKR-Medium.woff) format('woff'),url(font/NotoSansKR-Medium.otf) format('opentype');}
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(font/NotoSansKR-Bold.woff2) format('woff2'),url(font/NotoSansKR-Bold.woff) format('woff'),url(font/NotoSansKR-Bold.otf) format('opentype');}
+@font-face {font-family: 'SCProsperSans';font-style: normal;font-weight: 500;src: url(font/SCProsperSans-Medium.otf) format('opentype');}
+@font-face {font-family: 'SCProsperSans';font-style: normal;font-weight: 500;src: url(font/SCProsperSans-Medium.otf) format('opentype');}
+@font-face {font-family: 'SCProsperSans';font-style: normal;font-weight: 400;src: url(font/SCProsperSans-Light.otf) format('opentype');}
+[v-cloak] {
+    display: none;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+body, h1, h2, h3, h4, h5, h6, input, textarea, select { font-family: 'Noto Sans KR', sans-serif !important; }
+body{color:#191919;letter-spacing: -.05em;font-weight: 400;font-size:14px}
+header, section, footer, article, nav, aside {display:block}
+/* reset */
+ol,ul,li,p,dt,dd,p,dl{list-style: none;padding:0;margin:0}
+
+i,em{font-style: normal;}
+table caption{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -9999em;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+}

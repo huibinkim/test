@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://school.programmers.co.kr/learn/courses/30/lessons/120809 -->
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml" class="" translate=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="코딩테스트 연습 - 배열 두 배 만들기">
+<meta name="og:title" property="og:title" itemprop="title name" content="코딩테스트 연습 - 배열 두 배 만들기">
+<meta name="twitter:image" property="og:image" itemprop="image primaryImageOfPage" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="og:image" property="og:image" itemprop="image primaryImageOfPage" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="twitter:url" property="og:url" content="https://programmers.co.kr/">
+<meta name="og:url" property="og:url" content="https://programmers.co.kr/">
+
+<title>코딩테스트 연습 - 배열 두 배 만들기 | 프로그래머스 스쿨</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://school.programmers.co.kr/assets/icons/favicon-40b78633b6556a68c3da8e2125c31512fbd01d09906ab76c8a8ff289e494cadb.png">
+<link rel="apple-touch-icon" type="image/png" href="https://school.programmers.co.kr/assets/icons/apple-icon-6eafc2c4c58a21aef692d6e44ce99d41f999c71789f277317532d0a9c6db8976.png">
+<meta name="keywords" content="코딩 교육, 코딩, 프로그래밍, 실습, 생활코딩, 알고리즘, javascript">
+<meta property="fb:app_id" content="339079816467879">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="프로그래머스 스쿨">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="image" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="nCpJydTCqpn-seVNRQKvq-uiyzXC0nftkGW1av8LB_yS_cRNgrz08jaWPw-cBL6LD2gBAe3IAD7nAj8c2Evz9g">
+<meta name="action-cable-url" content="wss://ws.programmers.co.kr:443/cable">
+
+
+  <link rel="stylesheet" media="all" href="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/library-fde8239530a1278c686e9b405fb833ba36a6cdf92d0f6433a27713dd62f061be.css" debug="false">
+  <link rel="stylesheet" media="all" href="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/application-d9d1f1fb4891e47acd53385fdd746d0cf7f33d3a7334eb4d01c83f6055441fd3.css">
+  <link rel="stylesheet" media="all" href="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/school-f79d0a3541a6c477fa410085718ac8533e7d86de08b9a58044058a3268993b32.css">
+
+
+<script type="text/javascript" async="" src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/js"></script><script src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/2050250308523590" async=""></script><script async="" src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/fbevents.js.다운로드"></script><script type="text/javascript" async="" src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/analytics.js.다운로드"></script><script async="" src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/gtm.js.다운로드"></script><script type="text/javascript" charset="utf-8">
+  window.__env__ = {
+    STAGE: 'production',
+    SENTRY_DSN: 'https://96f9fc1ff3f44acbb98a9c156338d14b@o1070092.ingest.sentry.io/6136918',
+    MINERVA_URL: 'minerva.programmers.co.kr',
+    HERA_CLIENT_HOST: 'https://d1nuzc1w51n1es.cloudfront.net'
+  }
+</script>
+
+
+  <!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({
+    'gtm.start':
+      new Date().getTime(), event: 'gtm.js'
+  });
+  var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true;
+  j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-NT8HLJD');</script>
+<!-- End Google Tag Manager -->
+
+
+<script src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/b220114e150221u331" async="" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/b157bd071e9b8d4fe3e7.css"><script src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/ba.v1.0.0.min.js.다운로드" async="" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/11f2b6c9471ed5519f4f.css"></head>
+<body class="learn-lessons learn-lessons-show" data-ns="Learn" data-controller="lessons" data-action="show" data-defaultlocale="ko" data-locale="ko">
+
+
+
+  <div class="navbar navbar-dark navbar-expand-lg navbar-application navbar-breadcrumb">
+  <a class="navbar-brand" href="https://school.programmers.co.kr/">
+    <img alt="logo" width="24" src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/bi-symbol-light-49a242793b7a8b540cfc3489b918e3bb2a6724f1641572c14c575265d7aeea38.png">
+</a>  <ol class="breadcrumb"><li><a href="https://school.programmers.co.kr/learn/challenges">코딩테스트 연습</a></li><li><a href="https://school.programmers.co.kr/learn/challenges/beginner">코딩테스트 입문</a></li><li class="active">배열 두 배 만들기</li></ol>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item"><a onclick="Learn.lessons.challengeable.startTour(true)" class="nav-link" id="help" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809#">도움말</a></li>
+        <li class="nav-item"><a class="nav-link" data-remote="true" href="https://school.programmers.co.kr/compile_options">컴파일 옵션</a></li>
+      </ul>
+    </div>
+</div>
+
+
+
+<div class="main theme-dark">
+  
+
+          <script>
+            window.WEBAPP_HOSTS = {
+              PROGRAMMERS: 'https://programmers.co.kr',
+              BUSINESS: 'https://business.programmers.co.kr',
+              SCHOOL: 'https://school.programmers.co.kr',
+              CAREER: 'https://career.programmers.co.kr',
+              CAMPUS: 'https://campus.programmers.co.kr',
+              GAIA : 'https://gaia.programmers.co.kr',
+            };
+          </script><script src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/f15760c332850f41798a.js.다운로드" defer="defer"></script>
+
+
+  <div class="lesson-content" data-course-slug="알고리즘-연습" data-course-id="30" data-lesson-id="120809" data-lesson-type="Challenge" data-next-lesson-id="">
+
+    
+
+<ul class="challenge-nav nav nav-tabs nav-tabs-dark task-tab" id="tab" role="tablist">
+  <li class="nav-item algorithm-nav-link algorithm-title">
+    배열 두배 만들기
+  </li>
+
+  
+<div class="challenge-settings nav-item">
+    <div class="btn-group-theme btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-sm btn-outline-dark active">
+          <input type="radio" name="themes" autocomplete="off" checked="" data-toggle="button" data-theme="dark">dark
+        </label>
+        <label class="btn btn-sm btn-outline-dark">
+          <input type="radio" name="themes" autocomplete="off" data-toggle="button" data-theme="light">light
+        </label>
+    </div>
+
+      <div data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="코드 에디터의 단축키를 설정하는 옵션입니다. 선호하는 에디터 옵션이 없다면 sublime을 선택해주세요." data-original-title="" title="">
+        <div class="btn-group-keymap btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-dark active">
+              <input type="radio" name="keymaps" autocomplete="off" checked="" data-keymap="sublime">sublime
+            </label>
+            <label class="btn btn-sm btn-outline-dark">
+              <input type="radio" name="keymaps" autocomplete="off" data-keymap="vim">vim
+            </label>
+            <label class="btn btn-sm btn-outline-dark">
+              <input type="radio" name="keymaps" autocomplete="off" data-keymap="emacs">emacs
+            </label>
+        </div>
+      </div>
+
+    <div class="dropdown-language" id="tour7">
+      <button class="btn btn-sm btn-dark dropdown-toggle" type="button" data-toggle="dropdown">
+        JavaScript
+      </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=c">C</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=cpp">C++</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=csharp">C#</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=go">Go</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=java">Java</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=javascript">JavaScript</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=kotlin">Kotlin</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=python3">Python3</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=ruby">Ruby</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=scala">Scala</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809?language=swift">Swift</a>
+        </div>
+    </div>
+
+
+  <div class="connection-box connection-status js-connection-status-alert connected">
+    <svg class="ic-18"><use xlink:href="/assets/svg-defs-e36ca783c6e00d6121c1a1fee493027aa3eb68b1c0a9b6aed23a7dd5e6ac2edb.svg#ic-power-off"></use></svg>
+    <span class="connection-status-txt">네트워크 연결 끊김</span>
+  </div>
+</div>
+
+</ul>
+
+<div class="challenge-content lesson-algorithm-main-section " data-challengeable-id="14649" data-challengeable-type="algorithm" data-algorithm-type="standard" data-language="javascript" data-user-id="498653" data-interface-type="function">
+    
+
+<div class="main-section false">
+  <div class="guide-section false" id="tour2" style="width: calc(40% - 12px);">
+    <div class="guide-section-description">
+      <h6 class="guide-section-title">문제 설명</h6>
+      <div class="markdown solarized-dark"><p>정수 배열 <code>numbers</code>가 매개변수로 주어집니다. <code>numbers</code>의 각 원소에 두배한 원소를 가진 배열을 return하도록 solution 함수를 완성해주세요.</p>
+
+<hr>
+
+<h5>제한사항</h5>
+
+<ul>
+<li>-10,000 ≤ <code>numbers</code>의 원소 ≤ 10,000</li>
+<li>1 ≤ <code>numbers</code>의 길이 ≤ 1,000</li>
+</ul>
+
+<hr>
+
+<h5>입출력 예</h5>
+<table class="table">
+        <thead><tr>
+<th>numbers</th>
+<th>result</th>
+</tr>
+</thead>
+        <tbody><tr>
+<td>[1, 2, 3, 4, 5]</td>
+<td>[2, 4, 6, 8, 10]</td>
+</tr>
+<tr>
+<td>[1, 2, 100, -99, 1, 2, 3]</td>
+<td>[2, 4, 200, -198, 2, 4, 6]</td>
+</tr>
+</tbody>
+      </table>
+<hr>
+
+<h5>입출력 예 설명</h5>
+
+<p>입출력 예 #1</p>
+
+<ul>
+<li>[1, 2, 3, 4, 5]의 각 원소에 두배를 한 배열 [2, 4, 6, 8, 10]을 return합니다.</li>
+</ul>
+
+<p>입출력 예 #2</p>
+
+<ul>
+<li>[1, 2, 100, -99, 1, 2, 3]의 각 원소에 두배를 한 배열 [2, 4, 200, -198, 2, 4, 6]을 return합니다.</li>
+</ul>
+</div>
+    </div>
+  </div>
+
+
+  <div class="gutter gutter-horizontal" style="width: 24px; background-image: url(&quot;/assets/img-grippie-vertical-86e641691e88be56a100b80e3d437ae6effea08c189fdbdb2396825486763a15.png&quot;);"></div><div class="run-section" style="width: calc(60% - 12px);">
+    <div id="tour3" class="code-section" onkeyup="Hera.tryoutChallenges.resizeEditor(this);" style="height: calc(60% - 7px);">
+      <div class="editor">
+        <ul class="nav nav-pills editor-nav-pills tap-form">
+    <input type="hidden" name="initial_code_49652" id="initial_code_49652" value="function solution(numbers) {
+    var answer = [];
+    return answer;
+}">
+    <input id="49652" data-type="code" data-language="javascript" type="hidden" value="function solution(numbers) {
+    var answer = [];
+    let cnt = 0;
+    while(cnt &lt; numbers.length){
+        answer.push(numbers[cnt]*2)
+        cnt = cnt + 1;
+    }
+    
+    return answer;
+}
+
+
+
+// 1. numbers에서 배열의 원소를 꺼내야함 
+// numbers[0], numbers[4]등으로 꺼낼수있음.
+// 2. 원소를 꺼낸것을 2배하고 다시 새 배열에 넣어야함.
+// answer.push(1);">
+    <li class="nav-item">
+      <a href="https://school.programmers.co.kr/learn/courses/30/lessons/120809#" class="btn-tab nav-link active" data-id="49652" data-language="javascript">
+        solution.js </a>
+    </li>
+</ul>
+        
+          <textarea hidden="" id="code" name="code" style="display: none;">function solution(numbers) {
+    var answer = [];
+    let cnt = 0;
+    while(cnt &lt; numbers.length){
+        answer.push(numbers[cnt]*2)
+        cnt = cnt + 1;
+    }
+    
+    return answer;
+}
+
+
+
+// 1. numbers에서 배열의 원소를 꺼내야함 
+// numbers[0], numbers[4]등으로 꺼낼수있음.
+// 2. 원소를 꺼낸것을 2배하고 다시 새 배열에 넣어야함.
+// answer.push(1);</textarea><div class="CodeMirror cm-s-tomorrow-night-bright CodeMirror-wrap CodeMirror-focused" translate="no"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 333.469px; left: 58px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="bottom: 0px; display: block;"><div style="min-width: 1px; height: 503px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="margin-left: 48px; margin-bottom: -8px; border-right-width: 42px; min-height: 478px; padding-right: 8px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 10px; top: 313.469px; height: 22.3906px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">function</span> <span class="cm-def">solution</span>(<span class="cm-def">numbers</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">var</span> <span class="cm-def">answer</span> <span class="cm-operator">=</span> [];</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">let</span> <span class="cm-def">cnt</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">while</span>(<span class="cm-variable-2">cnt</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">numbers</span>.<span class="cm-property">length</span>){</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">answer</span>.<span class="cm-property">push</span>(<span class="cm-variable-2">numbers</span>[<span class="cm-variable-2">cnt</span>]<span class="cm-operator">*</span><span class="cm-number">2</span>);</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">cnt</span> <span class="cm-operator">=</span> <span class="cm-variable-2">cnt</span> <span class="cm-operator">+</span> <span class="cm-number">1</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">for</span>(<span class="cm-keyword">let</span> <span class="cm-def">cnt</span> <span class="cm-operator">=</span><span class="cm-number">0</span>; <span class="cm-variable-2">cnt</span><span class="cm-operator">&lt;</span><span class="cm-variable">number</span>.<span class="cm-property">length</span>; <span class="cm-variable-2">cnt</span><span class="cm-operator">=</span><span class="cm-variable-2">cnt</span><span class="cm-operator">+</span><span class="cm-number">1</span>;){</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">answer</span>.<span class="cm-property">push</span>(<span class="cm-variable-2">numbers</span>[<span class="cm-variable-2">cnt</span>]<span class="cm-operator">*</span><span class="cm-number">2</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable-2">answer</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -48px; width: 48px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// 1. numbers에서 배열의 원소를 꺼내야함 </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// numbers[0], numbers[4]등으로 꺼낼수있음.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// 2. 원소를 꺼낸것을 2배하고 다시 새 배열에 넣어야함.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// answer.push(1);</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 42px; width: 1px; border-bottom: 0px solid transparent; top: 478px;"></div><div class="CodeMirror-gutters" style="height: 520px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 48px;"></div></div></div></div>
+      </div>
+    </div>
+
+    <div class="gutter gutter-vertical" style="height: 14px; background-image: url(&quot;/assets/img-grippie-horizon-9ee873f74b6c8cb40d35bccfb7b34fd12c6c78dccf964c22674c3ae8ed3995be.png&quot;);"></div><div class="output-section" id="tour6" style="height: calc(40% - 7px);">
+      <div class="tab-header">
+        <div id="output-title" class="output-title failed" data-toggle="tab">
+          <span class="connection-status connected" data-container="body" data-toggle="popover" data-placement="top" title="" data-html="true" data-content="
+                  &lt;h6&gt;네트워크가 불안정하여 서버와의 연결이 끊어졌습니다.
+                  페이지 새로고침을 하거나 네트워크가 안정적이 되면 자동으로 재 연결됩니다.&lt;/h6&gt;
+                  &lt;h6 style=&#39;margin-top: 4px;&#39;&gt;네트워크가 정상임에도 계속해서 연결이 끊어진 상태가 지속된다면 네트워크 방화벽 문제일 수 있습니다.
+                  모바일 테더링 등 다른 네트워크를 통해 테스트에 접속해 보세요.&lt;/h6&gt;" data-original-title="서버와의 연결 끊김">
+            <svg class="ic-24"><use xlink:href="/assets/svg-defs-e36ca783c6e00d6121c1a1fee493027aa3eb68b1c0a9b6aed23a7dd5e6ac2edb.svg#ic-power-off"></use></svg>
+          </span>
+
+          실행 결과
+            <a id="stop-button" class="btn btn-sm btn-danger" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809#" style="display: none;">실행 중지</a>
+          <span id="output-spinner" class="spinner hidden">
+              <span class="bounce1"></span>
+              <span class="bounce2"></span>
+              <span class="bounce3"></span>
+            </span>
+        </div>
+      </div>
+      <div class="console tab-content">
+        <div id="output" class="console-output tab-pane fade in active show"><pre class="console-content"><div></div><table class="console-testcase" data-index="0">
+  <tbody><tr><td colspan="2">테스트 1</td></tr>
+  <tr>
+  <td class="td-label" align="right">입력값 <span>〉</span></td>
+  <td class="input">[1, 2, 3, 4, 5]</td>
+</tr>
+  <tr>
+  <td class="td-label" align="right">기댓값 <span>〉</span></td>
+  <td class="output">[2, 4, 6, 8, 10]</td>
+</tr>
+  <tr>
+    <td class="td-label" align="right" valign="top">실행 결과 <span>〉</span></td>
+    <td class="result passed">테스트를 통과하였습니다.</td>
+  </tr>
+  <tr style="display:none">
+    <td class="td-label" align="right" valign="top">출력 <span>〉</span></td>
+    <td class="stdout"></td>
+  </tr>
+</tbody></table><table class="console-testcase" data-index="1">
+  <tbody><tr><td colspan="2">테스트 2</td></tr>
+  <tr>
+  <td class="td-label" align="right">입력값 <span>〉</span></td>
+  <td class="input">[1, 2, 100, -99, 1, 2, 3]</td>
+</tr>
+  <tr>
+  <td class="td-label" align="right">기댓값 <span>〉</span></td>
+  <td class="output">[2, 4, 200, -198, 2, 4, 6]</td>
+</tr>
+  <tr>
+    <td class="td-label" align="right" valign="top">실행 결과 <span>〉</span></td>
+    <td class="result passed">테스트를 통과하였습니다.</td>
+  </tr>
+  <tr style="display:none">
+    <td class="td-label" align="right" valign="top">출력 <span>〉</span></td>
+    <td class="stdout"></td>
+  </tr>
+</tbody></table><div class="console-heading">테스트 결과 (~˘▾˘)~</div><div class="console-passed">2개 중 2개 성공</div><div class="console-message">샘플 테스트 케이스를 통과했다는 의미로, 작성한 코드가 문제의 정답은 아닐 수 있습니다.<br>(샘플 테스트 케이스는 [테스트 케이스 추가하기] 버튼을 통해 확인하실 수 있습니다.)</div></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="button-section">
+  <div class="testcase-button">
+    <a id="btn-show-question" class="btn btn-dark" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809/questions">질문하기 (1)</a>
+      <a class="btn btn-dark btn-block" data-remote="true" href="https://school.programmers.co.kr/challenge_algorithms/14649/custom_testcases?lesson_id=120809">
+        테스트 케이스 추가하기
+</a>  </div>
+
+  <div class="func-buttons">
+      <a id="view-solution-group" class="btn btn-dark btn-svg" href="https://school.programmers.co.kr/learn/courses/30/lessons/120809/solution_groups?language=javascript">
+         <span>다른 사람의 풀이</span>
+</a>
+      <a id="reset-code" class="btn btn-dark" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="에디터의 코드가 초기화됩니다. 초기화 버튼을 누르기 이전 코드 복원하려면 코드 에디터에 커서를 두고 Ctrl-Z를 눌러 보세요." href="https://school.programmers.co.kr/learn/courses/30/lessons/120809#" data-original-title="" title="">초기화</a>
+      <div id="tour4">
+        <button name="button" type="submit" id="run-code" class="btn btn-dark" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="작성한 코드를 제출하기 전에 먼저 실행해볼 수 있습니다. 예시 테스트 케이스를 사용하며, [테스트 케이스 추가하기]를 눌러 원하는 테스트 케이스를 추가할 수 있습니다." data-original-title="" title="">코드 실행</button>
+      </div>
+
+      <div id="tour5">
+        <button name="button" type="submit" id="submit-code" class="btn btn-primary" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="테스트 종료 전까지 언제든 다시 제출할 수 있으며, 제출한 코드 중 가장 높은 점수를 낸 코드가 최종 답안이 됩니다." data-original-title="" title="">제출 후 채점하기</button>
+      </div>
+  </div>
+</div>
+
+</div>
+  </div>
+
+</div>
+
+
+
+<div class="modal fade" id="modal-dialog" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+  <script src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/library-24fadb799c87f2eb258a9334eea1dfe7c4854bbcd0706d3c752d9e022b5ab6e7.js.다운로드" debug="false"></script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("set","autoConfig",!1,"2050250308523590");fbq("init","2050250308523590");fbq("track","PageView");</script>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2050250308523590&amp;ev=PageView&amp;noscript=1">
+</noscript>
+<script type="text/javascript" id="">(function(c,b,d){c.__beusablerumclient__={load:function(e){var a=b.createElement("script");a.src=e;a.async=!0;a.type="text/javascript";b.getElementsByTagName("head")[0].appendChild(a)}};c.__beusablerumclient__.load(d+"?url\x3d"+encodeURIComponent(b.URL))})(window,document,"//rum.beusable.net/load/b220114e150221u331");</script><div class="tui-tooltip" style="display: none;"><div class="arrow"></div><span class="text"></span></div><div class="tui-tooltip" style="display: none;"><div class="arrow"></div><span class="text"></span></div>
+  <script>
+//<![CDATA[
+    I18n.defaultLocale = "ko";
+    I18n.locale = "ko";
+    I18n.fallbacks = true;
+
+//]]>
+</script>  <script src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/application-e12d526dd87ece6c8e92a5f18796c8040363a91eec77362fd690e60514fde153.js.다운로드"></script>
+
+<script>
+//<![CDATA[
+window.addEventListener('load', function() {});
+//]]>
+</script>
+  <script src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/all.js.다운로드" type="text/javascript">
+    cloudinary.setCloudName('eightcruz');
+  </script>
+
+  <script src="./코딩테스트 연습 - 배열 두 배 만들기 _ 프로그래머스 스쿨_files/loader.js.다운로드" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    Sentry.init({
+      environment: "production",
+      dsn: "https://96f9fc1ff3f44acbb98a9c156338d14b@o1070092.ingest.sentry.io/6136918",
+      integrations: [new Sentry.Integrations.BrowserTracing()],
+      initialScope: {
+        code_version: "e4ee18f92533c8de9be5516655c368638cc0e481",
+        user: {
+          id: 498653,
+          username: "a****************m",
+          email: "ab******@naver.com"
+        },
+      },
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      tracesSampleRate: 0.01,
+      beforeSend: function beforeSend(event) {
+        const firstException = (event.exception && event.exception.values || [])[0];
+        const isBuggyBrowser = /Chrome\/10[2-4]/.test(navigator.userAgent);
+        const error = event.exception && event.exception.values && event.exception.values[0];
+        const isKnownBrowserBug =
+          isBuggyBrowser &&
+          (error && error.type === 'EvalError' &&
+            error.value && error.value.includes('Possible side-effect in debug-evaluate')) ||
+          (error && error.type === 'SyntaxError' && error.value &&
+            (error.value.includes('Unexpected end of input') ||
+             error.value.includes('Unexpected token \'{\'') ||
+             error.value.includes('Unexpected token \'}\'') ||
+             error.value.includes('Unexpected token \'(\'') ||
+             error.value.includes('Unexpected token \')\'') ||
+             error.value.includes('Unexpected token \'[\'') ||
+             error.value.includes('Unexpected token \']\'') ||
+             error.value.includes('Invalid or unexpected token') ||
+             error.value.includes('missing ) after argument list')));
+
+        if (firstException) {
+          const mechanism = firstException.mechanism;
+          const stacktrace = firstException.stacktrace;
+          const isOnError = () => mechanism && mechanism.type === 'onerror';
+          const hasAnonymousFilename = () => Boolean(
+            stacktrace && stacktrace.frames && stacktrace.frames.some(
+              ({ filename }) => filename && filename.includes('anonymous'),
+            ),
+          );
+
+          /* console의 예외는 sentry에 보내지 않는다. #4226 */
+          if (isOnError() && hasAnonymousFilename())
+            return null;
+        }
+
+        if (isKnownBrowserBug) {
+          return null;
+        }
+        return event;
+      },
+    });
+  </script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT8HLJD"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript" charset="utf-8">
+  window.addEventListener('afterprint', function() {
+      $.ajax({
+          type: 'POST',
+          url: '/api/action_trackings/print_screen',
+          data: {
+              current_path: window.location.href
+          }
+      })
+  })
+</script>
+
+
+
+
+<noscript>
+  이 사이트의 기능을 모두 활용하기 위해서는 자바스크립트를 활성화할 필요가 있습니다.
+  <a href="http://www.enable-javascript.com/ko/" target="_blank">
+    브라우저에서 자바스크립트를 활성화하는 방법</a>을 참고하세요.
+</noscript>
+
+
+
+
+<div id="snackbar-container"></div></body></html>

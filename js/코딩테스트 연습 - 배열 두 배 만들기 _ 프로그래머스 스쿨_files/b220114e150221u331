@@ -1,0 +1,13 @@
+(function(){
+  var u = document.URL,a=u.match(/beusable_viewer=([^&#]*)/),b=u.match(/staging_viewer=([^&#]*)/);
+  if(a&&a[1]) { __beusablerumclient__.load("//api.beusably.net/script/" + a[1]); } else if(b&&b[1]) { __beusablerumclient__.load("//staging.beusably.net/script/" + b&&b[1]); }else {
+    
+      (function () {
+        window.__baclient__ = {_code_v:2, load:__beusablerumclient__.load, device: "desktop"};
+        var a="//script.beusable.net/ba.v1.0.0.min.js";
+        __baclient__.load(a);__baclient__.sid="c6db08df08";__baclient__.rootDomain="programmers.co.kr";__baclient__.samplingRate=100;
+        
+      })()
+    
+  }
+  })()

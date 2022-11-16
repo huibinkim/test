@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+
+  <h1>hi its my site :)</h1>
+  <input id="txtInput" type="text" placeholder="검색" onkeyup="search(this)">
+  <input type="submit" value="CLICK ME">
+  <ul id="searchList"></ul>
+  <p id="txtContent"></p>
+  <p></p>
+  <div class="btn">
+    <img src="../images/good.svg" alt="btn">
+  </div>
+
+  <div class="imgClick">
+    <img src="../images/gear.svg" alt="gear">
+  </div>
+
+
+  <script src="../js/jquery-3.6.1.min.js"></script>
+  
+  <script>
+
+function search(target){
+  let txtInput = target.value;
+  let encodeTxt = encodeURI(txtInput);
+  console.log(txtInput);
+
+  $.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v2/search/web",
+    data: {query: txtInput}, //data자리에 함수를 써써 input에 적힌 txt를 가져올순 없을까?
+    headers: {Authorization: "KakaoAK 1500bc6d7f004a74430e35eb1e0b0ee0"}
+  })
+    .done(function(data) {
+
+      // console.log(data.documents[0].title);
+      // console.log(data.documents[0].contents);
+      $('#searchList').empty();
+      let checkTxt = $('#txtInput').val();
+      $('#searchList').append(checkTxt);  
+      $('#txtContent').append(data.documents[0].contents);  
+      
+    });
+}
+
+ 
+  </script>
+</body>
+</html>
